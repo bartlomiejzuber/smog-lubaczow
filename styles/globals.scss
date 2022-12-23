@@ -1,0 +1,229 @@
+body {
+  background-color: #ffffff;
+  color: #333333;
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1024px;
+
+  p {
+    text-align: justify;
+  }
+
+  .img-wrapper {
+    position: relative;
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .container {
+    padding: 1em;
+
+    a {
+      display: inline-block;
+      color: rgb(99, 91, 91);
+      padding: 0.5em;
+
+      &:hover {
+        color: #889085;
+      }
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    margin: auto;
+    height: calc(100vh - 68px);
+  }
+}
+
+iframe {
+  border: 1px solid #333;
+
+  @media screen and (min-width: 300px) {
+    width: 285px;
+    height: 290px;
+  }
+
+  @media screen and (min-width: 400px) {
+    width: 385px;
+    height: 300px;
+  }
+
+  @media screen and (min-width: 550px) {
+    width: 500px;
+    height: 350px;
+  }
+
+  @media screen and (min-width: 800px) {
+    width: 600px;
+    height: 450px;
+  }
+}
+
+header {
+  background-color: #eef1ec;
+  overflow: hidden;
+
+  nav {
+    max-width: 1024px;
+    margin: auto;
+
+    @media screen and (min-width: 600px) {
+      display: block;
+      height: 4em;
+    }
+  }
+
+  a {
+    float: right;
+    display: block;
+    color: #3e443a;
+    text-align: center;
+    padding: 1em 1.1em;
+    text-decoration: none;
+    font-size: 1.1em;
+
+    &:hover {
+      background-color: #3e4939;
+      color: white;
+    }
+    &:active {
+      background-color: #3e4939;
+      color: white;
+    }
+
+    @media screen and (min-width: 600px) {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 1em;
+    }
+  }
+
+  .hamburger-icon {
+    width: 1.5em;
+    margin-right: 1em;
+    display: block;
+    padding: 1em 1.1em;
+    margin-left: auto;
+
+    @media screen and (min-width: 600px) {
+      display: none;
+    }
+  }
+
+  .links-container {
+    display: block;
+    max-height: 0;
+    transition: max-height 0.25s ease-out;
+    overflow: hidden;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: #3e4939;
+    flex-direction: column;
+
+    &.show-mobile {
+      max-height: 105px;
+      display: block;
+
+      a {
+        display: block;
+        float: none;
+        color: white;
+      }
+    }
+
+    @media screen and (min-width: 600px) {
+      display: flex;
+      flex-direction: row;
+      max-height: none;
+      background-color: #eef1ec;
+      height: 100%;
+    }
+  }
+
+  .title {
+    float: left;
+  }
+
+  .icon {
+    display: none;
+  }
+}
+
+.map-container {
+  text-align: center;
+}
+
+.air-index-block {
+  margin: 1em 0;
+  .emoji {
+    font-size: 8em;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .description {
+    text-align: center;
+    font-size: 1.5em;
+  }
+}
+
+.air-pollution-details table {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 20px;
+
+  th,
+  td {
+    border: 1px solid black;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  .last-update {
+    padding-bottom: 10px;
+    padding-right: 15px;
+    text-align: right;
+    font-style: italic;
+  }
+
+  .copyright {
+    background-color: #eef1ec;
+    text-align: center;
+    width: 100%;
+
+    a {
+      display: inline-block;
+      color: #333;
+      text-decoration: none;
+      padding: 0.5em;
+
+      &:hover {
+        color: #5a6357;
+      }
+    }
+  }
+}
